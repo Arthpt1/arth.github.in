@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/93ccaef8d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX DESIGNER</p>
+            <h1>Hi,<span>I'm Arth Patel</span><br>From India</h1>
+        </div>
+    </div>
+</div>
+<!-- ---------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+              <img src="images/user.jpg"> 
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>i'm an engineer from DJMIT affiliated with GTU.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Projects & Internships')">Projects & Internships</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Developments</span><br>Web App Development</li>
+                        <li><span>Graphic Designing</span><br>Corel Draw, Adobe Photoshop</li>    
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Projects & Internships">
+                    <ul>
+                        <li><span>IMAGE STEGANOGRAPHY</span><br>You can hide anything behund the images</li>
+                        <li><span>Diabetes Prediction system</span><br>Predect Diabetes bases in Database</li>
+                        <li><span>Movie Recommendation System</span></li>    
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Current</span><br>OM INFOSOLUTIONS PVT. LTD.</li>
+                        <li><span>2019-2023</span><br>Bachelor of Engineering</li>
+                        <li><span>2016-2018</span><br>High School</li>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------services-------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+           <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Get your website design perfectly</p>
+            <a href="#">Learn more</a>
+           </div>
+           <div>
+            <i class="fa-sharp fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>Get the best user review</p>
+            <a href="#">Learn more</a>
+           </div>
+        </div>
+    </div>
+</div>
+<!----------portfolio------------>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Image Steganography App</h3>
+                    <p>The app helps you to save the sensitive information inside the image and image still looks like normal image</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Image Steganography App</h3>
+                    <p>The app helps you to save the sensitive information inside the image and image still looks like normal image</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                 <img src="images/work-3.png">
+                 <div class="layer">
+                    <h3>Image Steganography App</h3>
+                    <p>The app helps you to save the sensitive information inside the image and image still looks like normal image</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>         
+    </div>
+</div>
+<!-----------------contact--------------->
+<div id="contact">
+    <div id="container">
+        <div id="row">
+            <div id="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>arthp82@gmail.com</p>
+                <p>8347889323</p>
+                <div id="social-icons">
+                    <a href="https://facebook.com/arthp82"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+        }
+        for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
